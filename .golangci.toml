@@ -7,16 +7,13 @@ enable = [
     # for the full, current list of available linters.
     
     # Default linters
-    "deadcode", # Finds unused code
     "errcheck", # Detect unchecked errors
     "gosimple", # Suggest code simplifications
     "govet", # Reports suspicious constructs
     "ineffassign", # Detects unused variable assignments
     "staticcheck", # go vet on steroids
-    "structcheck", # Find unused struct fields
-    "typecheck", # Standard Go type checks
     "unused", # Detect unused constants, variables, functions and types
-    "varcheck", # Find unused global variables and constants
+    "stylecheck", # Stylecheck is a replacement for golint.
 
     # Suggested additional linters
     "gocyclo", # or "cyclop", # Detect cyclomatic complexity
@@ -27,6 +24,16 @@ enable = [
     "revive",  # General purpose linter    
     "unconvert", # Detect unnecessary type conversions
     "unparam", # Detect unused function parameters
+    "errname", # Checks that sentinel errors are prefixed with the Err and error types are suffixed with the Error
+    "errorlint", # Errorlint is a linter for that can be used to find code that will cause problems with the error wrapping scheme introduced in Go 1.13.
+    "forcetypeassert", # Finds forced type assertions
+    "gocritic", # Highly extensible Go source code linter providing checks currently missing from other linters.
+    "godox", # Tool for detection of FIXME, TODO and other comment keywords.
+    "gosec", # Inspects source code for security problems.
+    "inamedparam", # Reports interfaces with unnamed method parameters
+    "loggercheck", # Checks key value pairs for common logger libraries (kitlog,klog,logr,zap).
+    "prealloc", # Finds slice declarations that could potentially be pre-allocated.
+    "usestdlibvars", # A linter that detect the possibility to use variables/constants from the Go standard library.
 
     # Optional
     "bodyclose", # Check whether HTTP response bodies are closed
@@ -39,6 +46,10 @@ enable = [
     # "rowserrcheck", # Check whether Err of rows is checked
     # "sqlclosecheck", # Ensure sql.Rows and sql.Stmt are closed
     "tparallel", # Detects inappropriate use of t.Parallel()
+    "nestif", # Reports deeply nested if statements.
+    "perfsprint", # Checks that fmt.Sprintf can be replaced with a faster alternative
+    # "tagliatelle", # Checks the struct tags.
+    "testifylint", # Checks usage of github.com/stretchr/testify.
 ]
 
 [issues]
